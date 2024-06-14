@@ -24,7 +24,7 @@ public class GsoContext : DbContext
 			}
 			catch (Exception ex)
 			{
-				DialogResult result = MessageBox.Show("Erro: Por favor, entre em contato com o administrador do sistema. Existem atualizações pendentes ou sem conexão com internet. Deseja tentar conectar-se novamente?", "Pendências de atualizações", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+				DialogResult result = MessageBox.Show(ex.Message, MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
 
 				if (result == DialogResult.OK)
 				{
